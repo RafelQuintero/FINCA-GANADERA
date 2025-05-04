@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud de Rebaño</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/stylestodos.css" />
+  </head>
+  <body>
+    <h1>Registrar-Actualizar-Eliminar-Ver-el ( o los ) Rebaño(s)</h1>
+    <hr />
+
+    <!-- Se construye un contenedor para dividirlo en dos parte : izquierdo . derecho-->
+    <div id="container" style="display: flex">
+      <!-- Sección del lado izquierdo; donde se muestran las cajas texbox y los button -->
+      <!--?Incio de div id=forms y ell style=+++-->
+      <div
+        id="forms"
+        style="width: 50%; padding-right: 20px; border-right: 1px solid #ccc"
+      >
+        <!--Registrar Finca-->
+        <div class="row">
+          <div class="column">
+            <h2>Registrar_Anilmal</h2>
+            <form id="rebaño-form">
+              <br /><br />
+              <label for="tipoanimal">Tipo:</label><br />
+              <input
+                type="text"
+                id="tipoanimal"
+                name="tipo"
+                required
+              /><br /><br />
+              <label for="serialId">Serial_numeración:</label><br />
+              <input
+                type="text"
+                id="serialId"
+                name="serial_numeracion"
+                required
+              /><br /><br />
+              <label for="añoIngreso">Año_Ingreso:</label><br />
+              <input
+                type="text"
+                id="añoIngreso"
+                name="año_ingreso"
+                required
+              /><br /><br />
+
+              <label for="sevendio"> Vendido:</label><br />
+              <input type="text" id="sevendio" name="vendido" /><br /><br />
+
+              <label for="añovendido">Año_Vendido:</label><br />
+              <input
+                type="text"
+                id="añovendido"
+                name="año_vendido"
+              /><br /><br />
+
+              <label for="semurio"> Fallecio:</label><br />
+              <input type="text" id="semurio" name="fallecio" /><br /><br />
+
+              <label for="añomuerto"> Año_Fallecido :</label><br />
+              <input
+                type="text"
+                id="añomuerto"
+                name="año_fallecido"
+              /><br /><br />
+
+              <label for="idusuario"> Id del Usauario(propietario):</label
+              ><br />
+              <input type="text" id="idusuario" name="usuarioId" /><br /><br />
+
+              <label for="idfinca"> Id de la Finca:</label><br />
+              <input type="text" id="idfinca" name="fincaId" /><br /><br />
+
+              <button type="submit">Registrar_Animal_Usuario_Finca</button
+              ><br /><br />
+            </form>
+          </div>
+
+          <div class="column">
+            <!-- Actualizar Finca-->
+            <h2>Actualizar_Animal</h2>
+
+            <form id="update-rebaño-form">
+              <br />
+              <br />
+              <label for="updateID">id_Animal:</label><br />
+              <input type="text" id="updateID" name="id" required /><br />
+
+              <br /><br />
+              <label for="updatetipoanimal">Tipo:</label><br />
+              <input
+                type="text"
+                id="updatetipoanimal"
+                name="tipo"
+              /><br /><br />
+
+              <label for="updateserialId">Serial_numeración:</label><br />
+              <input
+                type="text"
+                id="updateserialId"
+                name="serial_numeracion"
+              /><br /><br />
+              <label for="updateañoIngreso">Año_Ingreso:</label><br />
+              <input
+                type="text"
+                id="updateañoIngreso"
+                name="año_ingreso"
+              /><br /><br />
+
+              <label for="updatesevendio"> Vendido:</label><br />
+              <input
+                type="text"
+                id="updatesevendio"
+                name="vendido"
+              /><br /><br />
+
+              <label for="updateañovendido"> Año_Vendido:</label><br />
+              <input
+                type="text"
+                id="updateañovendido"
+                name="año_vendido"
+              /><br /><br />
+
+              <label for="updatesemurio"> Fallecio:</label><br />
+              <input
+                type="text"
+                id="updatesemurio"
+                name="fallecio"
+              /><br /><br />
+
+              <label for="updateañomuerto"> Año_Fallecido:</label><br />
+              <input
+                type="text"
+                id="updateañomuerto"
+                name="año_fallecido"
+              /><br /><br />
+
+              <label for="updateidusuario"> Id del Usauario(propietario):</label
+              ><br />
+              <input
+                type="text"
+                id="updateidusuario"
+                name="usuarioId"
+              /><br /><br />
+
+              <label for="updateidfinca">Id de la Finca:</label><br />
+              <input
+                type="text"
+                id="updateidfinca"
+                name="fincaId"
+              /><br /><br />
+
+              <button type="submit">Actualizar_Animal</button><br /><br />
+            </form>
+            <!--Fin de actulizar finca-->
+          </div>
+        </div>
+
+        <!--Segunda fila y dos columnas dentro del contenedor-->
+
+        <div class="row">
+          <div class="column">
+            <!-- Incio de dlete finca-->
+            <h2>Eliminar Animal</h2>
+            <form id="delete-animal">
+              <label for="deleteanimal">ID del Animal:</label><br />
+              <input
+                type="text"
+                id="deleteanimal"
+                name="id"
+                required
+              /><br /><br />
+              <button type="submit">Eliminar_Animal</button><br /><br />
+            </form>
+            <!-- Fin de delete finca-->
+          </div>
+
+          <div class="column">
+            <!--Mostrar las fincas regitradas-->
+
+            <h2>Mostrar Rebaño, Dueños y Fincas</h2>
+            <br /><br /><br /><br />
+            <form id="get-animales">
+              <button type="submit">Mostrar_Animales_Dueños_Fincas</button>
+            </form>
+            <br /><br /><br />
+
+            <!-- Fin de mostrar fincas regisradas-->
+          </div>
+        </div>
+
+        <!--Tercera fila  una colunmna-->
+        <div class="row">
+          <div class="column">
+            <!--Mostrar una Finca -->
+            <h2>Mostrar Animal, Dueño y Finca</h2>
+            <form id="get-animal">
+              <label for="animalId">ID del Animal:</label><br />
+              <input type="text" id="animalId" name="id" required /><br /><br />
+
+              <button type="submit">Mostrar_Animal_Dueño_Finca</button
+              ><br /><br />
+            </form>
+            <!-- Fin de mostrar finca-->
+          </div>
+
+          <div class="column">
+            <h2>Mostra Rebaño en Finca</h2>
+
+            <form id="rebañoFinca">
+              <label for="rebañofincaId">ID de la Finca:</label><br />
+              <input
+                type="text"
+                id="rebañofincaId"
+                name="id"
+                required
+              /><br /><br />
+
+              <button type="submit">Mostrar_Animales_En_Finca</button
+              ><br /><br />
+            </form>
+          </div>
+        </div>
+
+        <!--? informacion nueva anexada -->
+        <div class="row">
+          <div class="column">
+            <h2>Usuario,sus animales, en Finca</h2>
+            <form id="usuarioAnimalesFinca">
+              <label for="usuarioAnimalesFincaId">ID del Usuario:</label><br />
+              <input
+                type="text"
+                id="usuarioAnimalesFincaId"
+                name="id"
+                required
+              /><br /><br />
+              <button type="submit">Mostrar_ sus_Animales_en_Finca</button>
+            </form>
+          </div>
+          <div class="column">
+            <h2>Ir a la pagina principal</h2>
+            <form id="regresarId">
+              <br /><br /><br /><br />
+              <button type="submit">Regresar</button><br /><br />
+            </form>
+          </div>
+        </div>
+        <!--? Fin de informacion nueva anexada-->
+
+        <!---Finaliza el div-->
+      </div>
+      <!--?Fin del div id=forms y style=+++-->
+      <!---*Seccion derecha: Se Muestran los resultados*-->
+
+      <div id="results" style="width: 50%; padding-left: 20px">
+        <h1>Mostrar Solicitudes</h1>
+        <h2>-****- Resultados -****-</h2>
+        <div id="get-results">
+          <!--- Aqui se mostraran los resultados obtenidos por medio del get -->
+        </div>
+      </div>
+    </div>
+
+    <!---*Fin de mostrar los Resultados-->
+
+    <!--- Fin del contendor-->
+
+    <!-- Seccion Izquierda del Formulario-->
+
+    <!--SE debe hacer el scripts par mosrar las fincas y la de una finca-->
+    <!---->
+    <script src="./clienterebaño/postrebaño.js"></script>
+    <script src="./clienterebaño/updaterebaño.js"></script>
+    <script src="./clienterebaño/deleterebaño.js"></script>
+    <script src="./clienterebaño/mostratodoslosrebaños.js"></script>
+    <script src="./clienterebaño/mostrarelanimal.js"></script>
+    <script src="./clienterebaño/mostraranimalesenfinca.js"></script>
+    <script src="./clienterebaño/mostraanimalesdeundueño.js"></script>
+
+    <script src="./fincavirutal/iraprincipal.js"></script>
+  </body>
+</html>

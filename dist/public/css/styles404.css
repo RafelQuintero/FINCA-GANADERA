@@ -1,0 +1,26 @@
+body {
+  line-break: auto;
+  background-color: rgb(54, 52, 52);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: rgb(181, 177, 171);
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+p {
+  font-size: 4rem;
+  margin: 0;
+}
+a {
+  color: rgb(181, 177, 171);
+  /* text-decoration: none; */
+  font-size: 3rem;
+}

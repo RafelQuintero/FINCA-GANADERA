@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion Propietario</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/stylestodos.css" />
+  </head>
+
+  <body>
+    <h1>Registrar-Actualizar-Eliminar-Ver-el o los Propietario(s)</h1>
+    <hr />
+
+    <!-- Se construye un contenedor para dividirlo en dos parte : izquierdo . derecho-->
+    <div id="container" style="display: flex">
+      <!-- Sección del lado izquierdo; donde se muestran las cajas texbox y los button -->
+      <!--?Incio de div id=forms y ell style=+++-->
+      <div
+        id="forms"
+        style="width: 50%; padding-right: 20px; border-right: 1px solid #ccc"
+      >
+        <!--Registrar Finca-->
+        <div class="row">
+          <div class="column">
+            <h2>Registrar Propietario</h2>
+            <form id="propietario-form">
+              <br /><br />
+              <label for="firsName">Nombre(s):</label><br />
+              <input
+                type="text"
+                id="firsName"
+                name="nombres"
+                required
+              /><br /><br />
+              <label for="lastName">Apellido(s):</label><br />
+              <input
+                type="text"
+                id="lastName"
+                name="apellidos"
+                required
+              /><br /><br />
+              <label for="email">Correo:</label><br />
+              <input type="text" id="email" name="email" required /><br /><br />
+              <label for="fincaid"> ID de la Finca que es Propietario</label
+              ><br />
+
+              <input type="text" id="fincaid" name="fincaId" /><br /><br />
+              <button type="submit">Registrar_Propietario</button><br /><br />
+            </form>
+          </div>
+
+          <div class="column">
+            <!-- Actualizar Finca-->
+            <h2>Actualizar Propietario</h2>
+            <br /><br />
+            <form id="update-propietario-form">
+              <label for="propietarioId">ID Propietario:</label><br />
+              <input type="text" id="propietarioId" name="id" required />
+              <br /><br />
+
+              <label for="updateName">Nuevo Nombre(s):</label> <br />
+              <input type="text" id="updateName" name="nombres" /><br /><br />
+
+              <label for="updatelastName">Nuevo Apellido(s):</label><br />
+              <input
+                type="text"
+                id="updatelastName"
+                name="apellidos"
+              /><br /><br />
+
+              <label for="updateEmail">Nuevo Correo:</label><br />
+              <input type="emai" id="updateEmail" name="email" /><br /><br />
+
+              <button type="submit">Actualizar_Propietario</button><br /><br />
+            </form>
+            <!--Fin de actulizar finca-->
+          </div>
+        </div>
+
+        <!--Segunda fila y dos columnas dentro del contenedor-->
+
+        <div class="row">
+          <div class="column">
+            <!-- Incio de dlete finca-->
+            <h2>Eliminar Propietario</h2>
+            <form id="delete-propietario">
+              <label for="deletepropietario">ID del Propietario:</label><br />
+              <input
+                type="text"
+                id="deletepropietario"
+                name="id"
+                required
+              /><br /><br />
+              <button type="submit">Eliminar_Propietario</button><br /><br />
+            </form>
+            <!-- Fin de delete finca-->
+          </div>
+
+          <div class="column">
+            <!--Mostrar las fincas regitradas-->
+
+            <h2>Mostrar Propietarios</h2>
+            <br /><br /><br /><br />
+            <form id="get-propietarios">
+              <button type="submit">Mostrar_Proietarios</button>
+            </form>
+            <br /><br /><br />
+
+            <!-- Fin de mostrar fincas regisradas-->
+          </div>
+        </div>
+
+        <!--Tercera fila  una colunmna-->
+        <div class="row">
+          <div class="column">
+            <!--Mostrar una Finca -->
+            <form id="get-propietario">
+              <label for="propietarioId">ID del Propietario:</label><br />
+              <input
+                type="text"
+                id="propietarioId"
+                name="id"
+                required
+              /><br /><br />
+
+              <button type="submit">Mostrar-Propietario</button><br /><br />
+            </form>
+            <!-- Fin de mostrar finca-->
+          </div>
+
+          <!--?   -->
+          <div class="column">
+            <h2>Ir a la página princioal</h2>
+            <form id="regresarId">
+              <br /><br />
+              <button type="submit">Regresar</button><br /><br />
+            </form>
+          </div>
+
+          <!--?  -->
+        </div>
+        <!---Finaliza el div-->
+      </div>
+      <!--?Fin del div id=forms y style=+++-->
+      <!---*Seccion derecha: Se Muestran los resultados*-->
+
+      <div id="results" style="width: 50%; padding-left: 20px">
+        <h1>Mostrar Solicitudes</h1>
+        <h2>-****- Resultados -****-</h2>
+        <div id="get-results">
+          <!--- Aqui se mostraran los resultados obtenidos por medio del get -->
+        </div>
+      </div>
+    </div>
+
+    <!---*Fin de mostrar los Resultados-->
+
+    <!--- Fin del contendor-->
+
+    <!-- Seccion Izquierda del Formulario-->
+
+    <!--SE debe hacer el scripts par mosrar las fincas y la de una finca-->
+
+    <script src="./clientepropietario/postpropietario.js"></script>
+
+    <!--*          -->
+
+    <script src="./clientepropietario/updatepropietario.js"></script>
+
+    <script src="./clientepropietario/deletepropietario.js"></script>
+
+    <script src="./clientepropietario/mostrarpropietarios.js"></script>
+
+    <script src="./clientepropietario/mostrarpropietario.js"></script>
+
+    <script src="./fincavirutal/iraprincipal.js"></script>
+    <!---Colocare aqui la direccion del scrip para eliminar finca de la dB-->
+
+    <!-- Iniciamos-->
+  </body>
+</html>

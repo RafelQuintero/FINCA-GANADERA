@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Movere el contendio un poco hacie la derecha de la pantalla */
+  margin-left: 20px;
+  /* Cambia el color de fondo de la página */
+  background-color: rgb(198, 180, 180);
+  /*background-image: url("https://i.pinimg.com/originals/c0/15/e3/c015e3a39db5316c179b63563f4b7ed4.jpg"); */
+  background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  background-position: center; /* Centra la imagen en la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+label {
+  font-size: 30px; /* Tamaño de la fuente del label */
+  color: rgb(65, 56, 56); /* Color del texto del label */
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(117, 7, 7); /* es el color de fondo del button */
+  color: white; /* ES el color del texto del button  */
+  border: rgb(0, 0, 0); /* color de borde del button  */
+  padding: 10px 20px; /* es el espaciado interno   */
+  cursor: pointer; /* Cambia el puntero al pasar por encima de button   */
+  padding: 20px 40px; /* Ajusta el espacio interno del botón */
+  font-size: 20px; /* Tamaño de la fuente del botón */
+}
+
+/* CAmbiar el el color del button al pasaar el mouse or el.  */
+button:hover {
+  background-color: rgb(31, 108, 5); /* Un verde más oscuro al pasar el mouse */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+.column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  top: 10px;
+  left: 50%;
+}
